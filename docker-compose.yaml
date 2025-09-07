@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   frontend-app:
     build: . 
@@ -50,3 +48,4 @@ services:
 networks:
   monitoring-net:
     driver: bridge
+    version: '3.8'
