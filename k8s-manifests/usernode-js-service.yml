@@ -4,10 +4,11 @@ metadata:
   name: usernode-js-service
   namespace: rohank-ns
 spec:
-  type: LoadBalancer  # Use NodePort if LoadBalancer is not supported
+  type: NodePort  # Use NodePort if LoadBalancer is not supported
   ports:
     - port: 3130
       targetPort: 3130
+      nodePort: 32051
       protocol: TCP
   selector:
     app: userprofile
